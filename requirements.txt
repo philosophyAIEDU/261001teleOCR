@@ -1,0 +1,11 @@
+# TeleOCR 교실 전체 실행용 패키지
+-r requirements-core.txt
+
+# AI 모델 실행 (NVIDIA GPU 는 README 의 CUDA 설치 방법 참고)
+torch>=2.4
+torchvision>=0.19
+# 공식 저장소(caipeng328/TeleOCR pyproject.toml)가 고정한 버전 범위와 맞춥니다.
+# trust_remote_code 모델 코드가 다른 버전에서 깨지지 않도록 4.57.x 로 고정합니다.
+transformers>=4.57,<4.58
+huggingface_hub>=0.34,<1.0
+accelerate>=1.0

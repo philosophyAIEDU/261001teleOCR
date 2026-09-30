@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Node
+node_modules/
+frontend/coverage/
+
+# 로컬 실행 데이터
+.teleocr_tmp/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

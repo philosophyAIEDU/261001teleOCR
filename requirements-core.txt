@@ -1,0 +1,9 @@
+# 웹 앱 실행에 필요한 기본 패키지 (AI 모델 제외)
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+python-multipart>=0.0.9
+pyyaml>=6.0
+pillow>=10.3
+pypdfium2>=4.30          # PDF → 이미지 (PyMuPDF 는 AGPL 이라 사용하지 않음)
+python-docx>=1.1
+openpyxl>=3.1

@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px; /* 최소 글자 크기 16px */
+  }
+  body {
+    @apply bg-slate-50 font-sans text-base leading-relaxed text-slate-900;
+  }
+  :focus-visible {
+    @apply outline outline-4 outline-offset-2 outline-amber-400;
+  }
+  button:disabled,
+  fieldset:disabled label {
+    @apply cursor-not-allowed opacity-60;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl px-5 py-2 font-bold transition;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:bg-brand-700;
+  }
+  .btn-secondary {
+    @apply btn border-2 border-brand-600 bg-white text-brand-700 hover:bg-brand-50;
+  }
+  .btn-ghost {
+    @apply btn px-3 text-slate-800 underline-offset-4 hover:bg-slate-200 hover:underline;
+  }
+  .btn-light {
+    @apply btn bg-white text-brand-800 hover:bg-brand-50;
+  }
+  .btn-outline-light {
+    @apply btn border-2 border-white text-white hover:bg-white/10;
+  }
+  .input {
+    @apply min-h-[44px] rounded-xl border-2 border-slate-400 bg-white px-3 py-2 text-base text-slate-900 focus:border-brand-600;
+  }
+  .card {
+    @apply rounded-2xl border border-slate-300 bg-white p-5;
+  }
+  .task-card {
+    @apply flex h-full min-h-[140px] cursor-pointer flex-col gap-1 rounded-2xl border-2 p-4 transition focus-within:outline focus-within:outline-4 focus-within:outline-offset-2 focus-within:outline-amber-400;
+  }
+  .kbd {
+    @apply rounded border border-slate-400 bg-slate-100 px-1.5 font-mono;
+  }
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:p-3 focus:text-brand-700;
+  }
+  .spinner {
+    @apply inline-block h-7 w-7 animate-spin rounded-full border-4 border-brand-100 border-t-brand-600;
+  }
+  .result-table {
+    @apply border-collapse bg-white;
+  }
+  .result-table td {
+    @apply border-2 border-slate-400 p-0 align-top;
+  }
+  .cell-input {
+    @apply block min-h-[44px] w-full min-w-[6rem] bg-transparent px-2 py-1 text-base focus:bg-amber-50;
+  }
+
+  /* 소개·가이드 문서(Markdown) 서식 */
+  .prose-content {
+    @apply leading-relaxed;
+  }
+  .prose-content h1 {
+    @apply mb-4 text-3xl font-bold;
+  }
+  .prose-content h2 {
+    @apply mb-3 mt-8 text-2xl font-bold first:mt-0;
+  }
+  .prose-content h3 {
+    @apply mb-2 mt-6 text-xl font-bold;
+  }
+  .prose-content p {
+    @apply my-3;
+  }
+  .prose-content ul {
+    @apply my-3 list-disc space-y-1 pl-6;
+  }
+  .prose-content ol {
+    @apply my-3 list-decimal space-y-1 pl-6;
+  }
+  .prose-content a {
+    @apply font-medium text-brand-700 underline underline-offset-2;
+  }
+  .prose-content blockquote {
+    @apply my-4 rounded-xl border-l-4 border-amber-500 bg-amber-50 p-4 text-amber-950;
+  }
+  .prose-content table {
+    @apply my-4 w-full border-collapse;
+  }
+  .prose-content th,
+  .prose-content td {
+    @apply border border-slate-300 p-2 text-left;
+  }
+  .prose-content th {
+    @apply bg-slate-100;
+  }
+  .prose-content code {
+    @apply rounded bg-slate-100 px-1 font-mono;
+  }
+  .prose-content strong {
+    @apply font-bold;
+  }
+}
